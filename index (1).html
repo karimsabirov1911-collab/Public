@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>БукваСчёт: детский центр в Ижевске</title>
+<style>
+:root{
+  --bg:#f4fafd; --surface:#ffffff; --ink:#12313f; --muted:#4d6773; --line:#cfe6f0;
+  --blue:#2fb4e6; --blue-ink:#0a5f85; --yellow:#ffc928; --pink:#ee5d8c; --green:#4cc27a;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e2029; --surface:#16303d; --ink:#eaf6fb; --muted:#9fbac7; --line:#244553;
+    --blue-ink:#7fd4f3; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e2029; --surface:#16303d; --ink:#eaf6fb; --muted:#9fbac7; --line:#244553;
+  --blue-ink:#7fd4f3; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Trebuchet MS","Segoe UI",system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Arial Rounded MT Bold","Trebuchet MS",system-ui,sans-serif;line-height:1.15;margin:0}
+h1{font-size:clamp(2.2rem,8vw,3.6rem)}
+h2{font-size:1.7rem;margin-bottom:6px}
+p{margin:0}
+.hero{padding:44px 0 36px}
+.logo{display:inline-block;background:var(--blue);color:#fff;font:700 1.15rem "Arial Rounded MT Bold","Trebuchet MS",sans-serif;padding:8px 18px;border-radius:999px;margin-bottom:22px}
+.lead{margin-top:16px;font-size:1.15rem;color:var(--muted);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:14px 24px;border-radius:14px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.main{background:var(--yellow);color:#1b2b33}
+.btn.alt{border:2px solid var(--blue);color:var(--blue-ink)}
+.btn:focus-visible{outline:3px solid var(--blue-ink);outline-offset:3px}
+.abacus{margin-top:34px;max-width:420px;border:5px solid var(--ink);border-radius:14px;padding:10px 12px;background:var(--surface)}
+.rod{display:flex;gap:6px;align-items:center;height:26px;position:relative}
+.rod::before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;background:var(--line);transform:translateY(-50%)}
+.rod i{position:relative;width:22px;height:20px;border-radius:50%;background:var(--yellow)}
+.rod i.p{background:var(--pink)} .rod i.g{background:var(--green)} .rod i.b{background:var(--blue)}
+.rod i.gap{background:none;width:30px}
+section{padding:30px 0}
+.sub{color:var(--muted);margin-bottom:20px}
+.list{display:grid;gap:12px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:2px 14px}
+.item h3{font-size:1.15rem}
+.item .price{font:700 1.2rem "Trebuchet MS",sans-serif;color:var(--blue-ink);white-space:nowrap}
+.item p{grid-column:1/-1;color:var(--muted);font-size:.97rem}
+.item .meta{grid-column:1/-1;font-size:.9rem;color:var(--muted)}
+.rating{display:flex;gap:16px;flex-wrap:wrap;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.rating b{font:700 2.2rem "Arial Rounded MT Bold",sans-serif;color:var(--blue-ink)}
+.contacts{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:10px}
+.contacts a{color:var(--blue-ink);font-weight:700}
+.points{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.points li{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--blue);border-radius:12px;padding:12px 16px}
+footer{padding:26px 0 40px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <span class="logo">БукваСчёт</span>
+  <h1>Читать, считать и писать с удовольствием</h1>
+  <p class="lead">Детский центр развития в Ижевске. Занятия для детей от 4 лет: чтение, ментальная арифметика, подготовка к школе, творчество.</p>
+  <div class="cta">
+    <a class="btn main" href="https://vk.ru/app6013442_-171780762?form_id=2#form_id=2" target="_blank" rel="noopener">Записаться на бесплатное занятие</a>
+    <a class="btn alt" href="tel:+79511990453">Позвонить</a>
+  </div>
+  <div class="abacus" aria-hidden="true">
+    <div class="rod"><i></i><i></i><i></i><i class="gap"></i><i class="p"></i><i class="p"></i></div>
+    <div class="rod"><i class="b"></i><i class="b"></i><i class="gap"></i><i class="g"></i><i class="g"></i><i class="g"></i></div>
+    <div class="rod"><i class="p"></i><i class="gap"></i><i></i><i></i><i></i><i class="b"></i></div>
+  </div>
+</div></header>
+
+<main>
+<section><div class="wrap">
+  <h2>Как проходят занятия</h2>
+  <ul class="points">
+    <li>Весёлые интеллектуальные игры и интерактивные задания.</li>
+    <li>Мини-группы, чтобы педагог успевал уделить внимание каждому.</li>
+    <li>Условия, при которых ребёнок сам хочет учиться.</li>
+    <li>Ежегодное участие детей в олимпиадах.</li>
+  </ul>
+</div></section>
+
+<section id="uslugi"><div class="wrap">
+  <h2>Занятия и цены</h2>
+  <p class="sub">Цена указана за одно занятие.</p>
+  <div class="list">
+    <div class="item"><h3>Читайка, от 5 лет</h3><span class="price">600 ₽</span><span class="meta">40 минут</span><p>Учимся читать с нуля: буквы, слоги, слова, без слёз и скуки. Индивидуально или в мини-группах.</p></div>
+    <div class="item"><h3>Подготовка к школе, 6–7 лет</h3><span class="price">600 ₽</span><span class="meta">45 минут</span><p>Чтение, письмо, счёт, развитие речи и внимания. Мини-группы до 6 человек.</p></div>
+    <div class="item"><h3>Ментальная арифметика, 5–10 лет</h3><span class="price">800 ₽</span><span class="meta">40 минут</span><p>Счёт в уме быстрее калькулятора. Развиваем память, внимание и логику.</p></div>
+    <div class="item"><h3>Скорочтение, от 7 лет</h3><span class="price">1190 ₽</span><span class="meta">40 минут, индивидуальное занятие</span><p>Упражнения, которые повышают скорость чтения.</p></div>
+    <div class="item"><h3>Каллиграфия, от 7 лет</h3><span class="price">800 ₽</span><span class="meta">40 минут</span><p>Коррекция и постановка почерка: учимся писать разборчиво и ровно.</p></div>
+    <div class="item"><h3>Бисероплетение, от 5 лет</h3><span class="price">600 ₽</span><span class="meta">40 минут</span><p>Основные приёмы бисероплетения, мелкая моторика, воображение.</p></div>
+    <div class="item"><h3>Детские мастер-классы, от 4 лет</h3><span class="price">1000 ₽</span><span class="meta">1 час</span><p>Творческие занятия для детей и родителей: роспись медовых пряников, свеча со льдом и другие.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="rating"><b>5,0</b><p>Средняя оценка по 34 отзывам на Яндекс Картах. Родители ставят нам высший балл.</p></div>
+</div></section>
+
+<section id="kontakty"><div class="wrap">
+  <h2>Как нас найти</h2>
+  <div class="contacts">
+    <p>ул. имени Репина, 35, Ижевск. Первая входная группа, 4 этаж, кабинет 409.</p>
+    <p>Телефон: <a href="tel:+79511990453">8 951 199-04-53</a></p>
+    <p>Работаем в будни с 9:00 до 20:00, в субботу и воскресенье с 9:00 до 13:00.</p>
+    <p>Работаем на основании лицензии на образовательную деятельность № Л035-01265-18/05619566 от 17.07.2026. Занятия можно оплатить материнским капиталом и оформить налоговый вычет 13%.</p>
+    <p><a class="btn main" href="https://vk.ru/app6013442_-171780762?form_id=2#form_id=2" target="_blank" rel="noopener">Записаться на бесплатное занятие</a></p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Демонстрационный сайт. Данные взяты с Яндекс Карт.</div></footer>
+</body>
+</html>
